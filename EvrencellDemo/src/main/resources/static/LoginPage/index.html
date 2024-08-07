@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>EVRENCELLDEMO</title>
+    <link rel="stylesheet" href="/EvrencellDemo/src/main/resources/static/LoginPage/css/style.css">
+</head>
+<body>
+<div class="container">
+    <img class="imagePart" src="/EvrencellDemo/src/main/resources/static/images/logo.png" alt=""> <br><br>
+    <form id="myForm">
+        <input type="text" id="phone" name="phone" placeholder="Phone Number" pattern="^5[0-9]{9}$"
+               minlength="10" maxlength="10" required>
+        <span id="phone-error">Your phone number must be in the format 5xx-xxx-xxxx and 10 digits.</span>
+        <br>
+        <input type="password" id="password" name="password" placeholder="Password"
+               minlength="8" maxlength="32" required>
+        <span id="password-error" >Your password must be at least 8 characters long and include uppercase, lowercase, digits, and special characters.</span>
+        <div>
+            <input type="checkbox" value="Remember me" id="rememberMe">
+            <label for="rememberMe">Remember me</label>
+        </div>
+        <br>
+        <input id="submitButton" type="button" value="Log in" />
+    </form>
+    <br>
+    <div>
+        <a href="/EvrencellDemo/src/main/resources/static/RegisterPage/register.html" class="otherButtons" >Register</a><br>
+    </div>
+        <div>
+            <a href="/EvrencellDemo/src/main/resources/static/RegisterPage/register.html" class="otherButtonsa" >Forgot Password</a><br>
+    </div>
+</div>
+<script src="/EvrencellDemo/src/main/resources/static/LoginPage/js/javascript.js" type="module"></script>
+</body>
+</html>
