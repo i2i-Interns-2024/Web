@@ -6,6 +6,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
+    background-image: url(/EvrencellDemo/src/main/resources/static/images/logo.gif);
 }
 
 div.container {
@@ -14,6 +15,7 @@ div.container {
     padding: 20px;
     background-color: #ffffff;
     border-radius: 65px;
+    background-image: url(/EvrencellDemo/src/main/resources/static/images/logo.gif);
    
 }
 
@@ -44,9 +46,11 @@ input[type="text"],
 input[type="password"] {
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ece6f7;
+    border: 1px solid #c8b8e8;
     outline: none;
-    box-shadow: 1px 1px 1px #000000;
+    box-shadow: 1px 1px 1px #c8b8e8;
+    background-color: #ece6f7;
+    ;
 
 }
 

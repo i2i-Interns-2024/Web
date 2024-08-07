@@ -17,7 +17,7 @@ const lnamePattern = fnamePattern;
 const phonePattern = /^5[0-9]{9}$/;
 const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
 const emailPattern = /^([\w-]+@([\w-]+\.)+[\w-]{2,4})?$/;
-const securityKeyPattern = /^[0-9]{6}$/;
+
 
 const registerButton = document.getElementById("registerButton");
 

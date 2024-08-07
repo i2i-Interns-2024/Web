@@ -19,6 +19,7 @@ body{
 .kutu1 {
     margin-left: 10px;
     background-color: rgb(255, 255, 255);
+    margin-top: 250px;
 }
 
 .kutu2 {
@@ -41,25 +42,24 @@ body{
     background-color: #5900fd;
     width: 500px;
 }
-
-label {
-    font-weight: bold;
-    color: #000000;
-    display: inline;
-}
-
-select {
-    background-color: #ece6f7;
-    border: none;
-    box-shadow: 1px 1px 1px violet;
+.kutu1 .input {
+    width: 100%; /* Genişliği kutu4 kadar */
     height: 40px;
-    outline: none;
-    appearance: none;
-    width: 500px;
-    
+    border: none; /* Kenar çizgisi yok */
+    background-color: #ece6f7;
+    box-shadow: 1px 1px 1px violet;
+    outline: none; /* Focus olduğunda outline yok */
+    margin-left: 0; /* Label ile input arasında boşluk yok */
+    padding: 0; /* İçerik ile kenar arasına boşluk yok */
 }
-
+.img{
+    width: 450px;
+    height: 450px;
+    margin-top: 50px;
+    margin-left: 150px;
+}
 input {
+   
     border: none; /* Çerçeveyi kaldırır */
     background: none; /* Arka planı kaldırır */
     outline: none; /* Odaklandığında çizgiyi kaldırır */
@@ -108,20 +108,8 @@ input {
     font-weight: bold;
     text-align: center;
 }
-
-.kutu1 .input {
-    width: 100%; /* Genişliği kutu4 kadar */
-    height: 40px;
-    border: none; /* Kenar çizgisi yok */
-    background-color: #ece6f7;
-    box-shadow: 1px 1px 1px violet;
-    outline: none; /* Focus olduğunda outline yok */
-    margin-left: 0; /* Label ile input arasında boşluk yok */
-    padding: 0; /* İçerik ile kenar arasına boşluk yok */
-}
-.img{
-    width: 450px;
-    height: 450px;
-    margin-top: 50px;
-    margin-left: 150px;
+label {
+    font-weight: bold;
+    color: #000000;
+    display: inline;
 }
