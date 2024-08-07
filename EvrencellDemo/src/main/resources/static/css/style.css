@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #8400ff;
+}
+
+div.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 65px;
+    box-shadow: -20px 15px 15px 15px #101010;
+}
+
+.imagePart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border-radius: 20px;
+    margin: 0px;
+    padding: 0px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: rgb(132, 0, 255);
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(137, 50, 220, 0.42);
+    border-radius: 75px;
+    outline: none;
+
+}
+
+
+input[type="button"] {
+    font-weight: bold;
+    font-family:"Cascadia Code";
+    padding: 10px;
+    background-color: rgb(132, 0, 255);
+    color: #ffffff;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+
+.otherButtons {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+
+}
+
+.otherButtons a {
+    background-color: rgba(132, 0, 255);
+    border-radius: 100px;
+}
+
+.loginButton {
+    font-weight: bold;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(132, 0, 255);
+
+}
+
+span {
+    color: red;
+    display: none;
+    font-size: 12px;
+}
