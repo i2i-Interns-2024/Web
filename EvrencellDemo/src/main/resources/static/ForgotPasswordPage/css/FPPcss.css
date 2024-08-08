@@ -43,14 +43,14 @@ body{
     width: 500px;
 }
 .kutu1 .input {
-    width: 100%; /* Genişliği kutu4 kadar */
+    width: 100%; 
     height: 40px;
-    border: none; /* Kenar çizgisi yok */
+    border: none; 
     background-color: #ece6f7;
     box-shadow: 1px 1px 1px violet;
-    outline: none; /* Focus olduğunda outline yok */
-    margin-left: 0; /* Label ile input arasında boşluk yok */
-    padding: 0; /* İçerik ile kenar arasına boşluk yok */
+    outline: none; 
+    margin-left: 0; 
+    padding: 0; 
 }
 .img{
     width: 450px;
@@ -60,15 +60,15 @@ body{
 }
 input {
    
-    border: none; /* Çerçeveyi kaldırır */
-    background: none; /* Arka planı kaldırır */
-    outline: none; /* Odaklandığında çizgiyi kaldırır */
-    padding: 8px; /* Yazı yazma alanı görünür olması için padding */
-    color: #000000; /* Yazı rengini ayarlayın */
-    font-size: 16px; /* Yazı boyutunu ayarlayın */
+    border: none; 
+    background: none; 
+    outline: none; 
+    padding: 8px; 
+    color: #000000; 
+    font-size: 16px;
 }
 
-/* Label ve input elemanlarını hizalamak için stil ayarları */
+
 .input-group {
     display: flex;
     align-items: center;
@@ -79,7 +79,7 @@ input {
     margin-right: 10px;
 }
 
-/* Submit butonunu stilize edin */
+
 .btn {
     margin-top: 40px;
     background-color: #4021b2;
@@ -100,10 +100,10 @@ input {
     background-color: #ece6f7;
     box-shadow: 1px 1px 1px violet;
     width: 140px;
-    height: 40px; /* Label'in yüksekliğini arttır */
+    height: 40px; 
     display: flex;
-    align-items: center; /* Label'in içindeki metni ortalar */
-    justify-content: center; /* Label'in içindeki metni ortalar */
+    align-items: center; 
+    justify-content: center; 
     color: #ffffff;
     font-weight: bold;
     text-align: center;
