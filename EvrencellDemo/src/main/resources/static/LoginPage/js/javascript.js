@@ -1,79 +1,39 @@
-function validate(inputElement, pattern, errorElement) {
-    const isValid = pattern.test(inputElement.value);
-    if (!isValid && inputElement.value !== '') {
-        errorElement.style.display = 'block';
-    } else {
-        errorElement.style.display = 'none';
-    }
-    return isValid;
-}
+document.getElementById('phone').addEventListener('input', function (e) {
 
-const phoneInputUnique = document.getElementById('phone');
-const phonePattern = /^5[0-9]{9}$/;
-const phoneError = document.getElementById('phone-error');
-const submitButton = document.getElementById('submitButton');
-const passwordInput = document.getElementById('password');
-const passwordError = document.getElementById("password-error");
-
-const rmCheck = document.getElementById("rememberMe");
-if (localStorage.checkbox && localStorage.checkbox !== "") {
-    rmCheck.setAttribute("checked", "checked");
-} else {
-    rmCheck.removeAttribute("checked");
-}
-if (localStorage.username) {
-    phoneInputUnique.value = localStorage.username;
-} else {
-    phoneInputUnique.value = "";
-}
-rmCheck.addEventListener('change', function () {
-    listenRememberMe();
+    this.value = this.value.replace(/[^0-9]/g, '');
 });
 
-function listenRememberMe() {
-    if (rmCheck.checked && phoneInputUnique.value !== "") {
-        localStorage.username = phoneInputUnique.value;
-        localStorage.checkbox = rmCheck.checked;
-    } else {
-        localStorage.username = "";
-        localStorage.checkbox = "";
+document.getElementById('submitButton').addEventListener('click', function () {
+    const phone = document.getElementById('phone').value;
+    const password = document.getElementById('password').value;
+
+    
+    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,32}$/;
+    if (!passwordPattern.test(password)) {
+        alert('Your password must be 8-32 characters long and include uppercase, lowercase, digits, and special characters.');
+        return;
     }
-}
 
-phoneInputUnique.addEventListener("change", function (event) {
-    const isPhoneValid = phonePattern.test(phoneInputUnique.value);
-    if (isPhoneValid !== true) {
-        phoneError.style.display = 'block';
-    } else {
-        localStorage.setItem("phoneInputValue", phoneInputUnique.value);
-        phoneError.style.display = 'none';
-    }
-});
-
-submitButton.addEventListener("click", async function (event) {
-
-    const isPhoneValid = validate(phoneInputUnique, phonePattern, phoneError);
-    if (isPhoneValid && passwordInput.value !== '') {
-        passwordError.style.display = 'none';
-        window.location.href = "../UserInformation/user_info.html";
-        try {
-            const response = await fetch(`http://35.194.5.106:8080/api/customer/login/${phoneInputUnique.value}/${passwordInput.value}`, {
-                method: "GET"
-            });
-            if (response.ok) {
-                // Wait for 2 seconds and redirect
-                setTimeout(function () {
-                    window.location.href = "../UserInformation/user_info.html";
-                }, 0);
-            } else {
-                // Display error message
-                alert("Please check your entrances and try again. ");
-            }
-        } catch (error) {
-            alert("An error occured ,please check your entrances and try again. ");
-            console.error("An error occurred:", error);
+    fetch('kaanapi', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            phone: phone,
+            password: password,
+        }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            window.location.href = '/EvrencellDemo/src/main/resources/static/UserInformationPage/UserInformationPage.html';
+        } else {
+            alert('Login failed: ' + data.message);
         }
-    } else {
-        passwordError.style.display = 'block';
-    }
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+    });
 });

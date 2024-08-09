@@ -6,39 +6,35 @@
     <title>EVRENCELL</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/FPPcss.css'>
-    <script src='js/FPPjs.js'></script>
+    <script src='js/FPPjs.js' type="module"></script>
 </head>
 <body>
     <div class="kutu1">
-        <div class="kutu3">
-            <div class="label1"><label for="package">National ID:</label></div>
-            
-            <div class="kutu4">
-                <input class="input" id="nationalıd" name="nationalıd" autocomplete="on" maxlength="50"
-                    minlength="2"  required type="text">
+        <form id="forgotPasswordForm">
+            <div class="kutu3">
+                <div class="label1"><label for="nationalid">National ID:</label></div>
+                <div class="kutu4">
+                    <input class="input" id="nationalid" name="nationalid" autocomplete="on" maxlength="11"
+                        minlength="11" required type="text" pattern="\d{11}">
+                </div>
             </div>
 
-
-        </div>
-        <div class="kutu3">
-            <div class="label1"><label for="email">Mail:</label></div>
-            
-            <div class="kutu4">
-                <input class="input" id="email" name="email" autocomplete="on" maxlength="50" minlength="2"
-                    required type="text">
+            <div class="kutu3">
+                <div class="label1"><label for="email">Email:</label></div>
+                <div class="kutu4">
+                    <input class="input" id="email" name="email" autocomplete="on" maxlength="50" minlength="5"
+                        required type="email">
+                </div>
             </div>
 
-
-        </div>
-        <div class="form-group">
-            <button type="submit" class="btn" id="registerButton">Submit</button></button>
-        </div>
-
+            <div class="form-group">
+                <button type="submit" class="btn" id="submitButton">Submit</button>
+            </div>
+        </form>
     </div>
+
     <div class="kutu2">
-        <img class="img" src="/EvrencellDemo/src/main/resources/static/images/logo.png">    
+        <img class="img" src="/EvrencellDemo/src/main/resources/static/images/logo.png" alt="Logo">    
     </div>
-
-    
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset='utf-8'>
@@ -7,68 +7,62 @@
     <title>EVRENCELL</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' media='screen' href='css/registercss.css'>
-    <script src='js/registerjs.js'></script>
+    <script src='js/registerjs.js' type="module"></script>
 </head>
 
 <body>
 
     <div class="kutu1">
-        <form>
+        <form id="registerForm">
             <div class="kutu3">
                 <div class="label1"><label for="name">Name:</label></div>
                 <div class="kutu4">
-                    <input class="input" id="name" name="name" autocomplete="on" maxlength="50" minlength="2" required
-                        type="text">
+                    <input class="input" id="name" name="name" autocomplete="on" maxlength="50" minlength="2" required type="text">
                 </div>
-
-
             </div>
+
             <div class="kutu3">
-                <div class="label1"><label for="surname">Sur name:</label></div>
-
+                <div class="label1"><label for="surname">Surname:</label></div>
                 <div class="kutu4">
-                    <input class="input" id="surname" name="surname" autocomplete="on" maxlength="50" minlength="2"
-                        required type="text">
+                    <input class="input" id="surname" name="surname" autocomplete="on" maxlength="50" minlength="2" required type="text">
                 </div>
-
-
             </div>
+
             <div class="kutu3">
-                <div class="label1"><label for="package">National ID:</label></div>
-
+                <div class="label1"><label for="nationalid">National ID:</label></div>
                 <div class="kutu4">
-                    <input class="input" id="nationalıd" name="nationalıd" autocomplete="on" maxlength="50"
-                        minlength="2" required type="text">
+                    <input class="input" id="nationalid" name="nationalid" autocomplete="on" maxlength="11" minlength="11" required type="text" pattern="\d{11}">
                 </div>
-
-
             </div>
+
+            <div class="kutu3">
+                <div class="label1"><label for="password">Password:</label></div>
+                <div class="kutu4">
+                    <input class="input" id="password" name="password" autocomplete="on" maxlength="32" minlength="8" required type="password"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,32}$" 
+                        title="Password must be 8-32 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.">
+                </div>
+            </div>
+
             <div class="kutu3">
                 <div class="label1"><label for="phone">Telephone Number:</label></div>
-
                 <div class="kutu4">
-                    <input class="input" id="phone" name="phone" autocomplete="on" maxlength="50" minlength="2" required
-                        type="text">
+                    <input class="input" id="phone" name="phone" autocomplete="on" maxlength="10" minlength="10" required type="text" pattern="^5[0-9]{9}$">
                 </div>
-
-
             </div>
+
             <div class="kutu3">
-                <div class="label1"><label for="email">Mail:</label></div>
-
+                <div class="label1"><label for="email">Email:</label></div>
                 <div class="kutu4">
-                    <input class="input" id="email" name="email" autocomplete="on" maxlength="50" minlength="2" required
-                        type="text">
+                    <input class="input" id="email" name="email" autocomplete="on" maxlength="50" minlength="5" required type="email">
                 </div>
-
-
             </div>
+
             <div class="kutu3">
                 <div class="label1"><label for="package">Tariff:</label></div>
-
                 <div class="select">
-                    <select id="package" name="package">
-                        <option value="1">Select</option>
+                    <select id="package" name="package" required>
+                        <option value="">Select</option>
                         <option value="1">ANKARA (3000 MINS- 3 GB - 3000 SMS) [50₺]</option>
                         <option value="2">BURSA (5000 MINS- 5 GB - 5000 SMS) [65₺]</option>
                         <option value="3">DİYARBAKIR (7000 MINS- 7 GB - 7000 SMS) [80₺]</option>
@@ -77,23 +71,17 @@
                         <option value="6">ESKİŞEHİR (1000 MINS- 20 GB - 5000 SMS) [140₺]</option>
                     </select>
                 </div>
-
             </div>
 
             <div class="form-group">
-                <button type="submit" class="btn" id="registerButton">Submit</button></button>
+                <button type="submit" class="btn" id="registerButton">Submit</button>
             </div>
-
+        </form>
     </div>
 
-
-    </form>
-
-    </div>
     <div class="kutu2">
-        <img class="img" src="/EvrencellDemo/src/main/resources/static/images/logo.png">
+        <img class="img" src="/EvrencellDemo/src/main/resources/static/images/logo.png" alt="Logo">
     </div>
-
 
 </body>
 
